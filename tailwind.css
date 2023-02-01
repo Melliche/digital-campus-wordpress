@@ -1,0 +1,11 @@
+/*
+Theme Name: Digital-Campus
+Author: VOTRE NOM
+Description: UNE DESCRIPTION
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
