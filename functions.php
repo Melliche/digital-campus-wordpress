@@ -24,6 +24,7 @@ function theme_register_nav_menu()
     register_nav_menus(array(
         'menu_principal' => __('Menu Principal', 'text_domain'),
         'liste_campus' => __('Liste campus', 'text_domain'),
+        'liens_rapides' => __('Liens rapides', 'text_domain'),
     ));
 }
 
