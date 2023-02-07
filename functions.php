@@ -31,3 +31,8 @@ add_action('after_setup_theme', 'theme_register_nav_menu', 0);
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
+
+add_image_size('panoramic-size-frontpage', 1512, 365, array('center', 'center'));
+add_image_size('presentation-size-frontpage', 756, 755, array('center', 'center'));
+add_image_size('card-size-frontpage', 350, 210, array('center', 'center'));
+add_image_size('presentation-size-page', 628, 421, array('center', 'center'));

@@ -148,8 +148,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 0,
-            "max": 0,
+            "min": 3,
+            "max": 3,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
@@ -176,7 +176,7 @@
                     "key": "field_63dbc832be38c",
                     "label": "text",
                     "name": "text",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -187,9 +187,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
         },
@@ -976,5 +976,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675351373
+    "modified": 1675785765
 }
