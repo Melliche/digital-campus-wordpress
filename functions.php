@@ -23,6 +23,8 @@ function theme_register_nav_menu()
 {
     register_nav_menus(array(
         'menu_principal' => __('Menu Principal', 'text_domain'),
+        'liste_campus' => __('Liste campus', 'text_domain'),
+        'liens_rapides' => __('Liens rapides', 'text_domain'),
     ));
 }
 
@@ -31,3 +33,5 @@ add_action('after_setup_theme', 'theme_register_nav_menu', 0);
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
+
+add_image_size( 'logo-footer', 373, 146, array( 'center', 'center' ) );
