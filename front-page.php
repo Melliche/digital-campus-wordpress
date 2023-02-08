@@ -166,6 +166,42 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <h2 class=""><?php the_field('section_8_title'); ?></h2>
+            <div>
+                <?php if (have_rows('section_8_repeteur')) :
+                ?>
+                    <ul class="">
+                        <?php while (have_rows('section_8_repeteur')) : the_row();
+                            $title = get_sub_field('title');
+                            $text = get_sub_field('text');
+                            $button = get_sub_field('button');
+                        ?>
+
+                            <li class="">
+
+                                <p class=""><?php echo $title; ?></p>
+                                <div>
+                                    <p class=""><?php echo $text; ?></p>
+                                    <p class=""><?php echo $button; ?></p>
+                                    <?php
+                                    $image = get_field('image');
+                                    $size = 'profile-image';
+                                    if ($image) {
+                                        echo wp_get_attachment_image($image, $size);
+                                    }
+                                    ?>
+                                </div>
+
+                            </li>
+
+
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
+        </div>
 </section>
 
 
