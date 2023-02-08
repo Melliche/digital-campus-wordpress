@@ -2,7 +2,22 @@
 module.exports = {
   content: ["./**/*.php"],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'max': '1512px',
+      },
+      listStyleType: {
+        square: 'square',
+      }
+    },
+    colors: {
+      'orange': '#F87C56',
+      'blue': '#0092BD',
+      'gray': '#EBEBEB',
+      'gray-grass': '#a1a1a1',
+      'white': '#FFFFFF',
+      'black': '#000000',
+    },
   },
   plugins: [],
 }

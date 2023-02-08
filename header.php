@@ -9,16 +9,18 @@
 
 
 <body <?php body_class(); ?>>
-<header class="flex flex-row justify-start items-center h-24 bg-[#EBEBEB]">
-    <div class="flex items-center justify-center h-8 px-8">
-        <?php
-        $image = get_field('logo', 'options');
-        $size = 'footer-size';
-        if ($image) {
-            echo wp_get_attachment_image($image, $size);
-        }
-        ?>
-    </div>
+<header class="flex flex-row justify-start items-center h-24">
+    <a href="/">
+        <div class="flex items-center justify-center h-8 px-8">
+            <?php
+            $image = get_field('logo', 'options');
+            $size = 'footer-size';
+            if ($image) {
+                echo wp_get_attachment_image($image, $size);
+            }
+            ?>
+        </div>
+    </a>
     <div class="flex text-xl font-semibold text-gray-500 px-2 sm:hidden">Menu</div>
     <nav>
         <ul class="hidden flex-row sm:flex">
