@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         display: ["Baloo 2", "cursive"],
       },
+      listStyleType: {
+        square: 'square',
+      }
       colors: {
         'orange': '#F87C56',
         'blue': '#0092BD',
@@ -27,7 +30,6 @@ module.exports = {
         'black': '#000000',
       },
     },
-
   },
   plugins: [],
 }

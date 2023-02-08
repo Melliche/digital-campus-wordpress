@@ -38,7 +38,7 @@
     <div class="grid grid-cols-4 mt-24 row-auto gap-14 mb-12">
         <div class="col-start-2">
             <h2 class="text-lg"><?= get_field('formulaire_titre_1', 'options'); ?></h2>
-            <nav class="pointer-events-auto hidden md:block">
+            <nav class="pointer-events-auto md:block">
                 <ul class="grid grid-cols-2">
                     <?php
                     // On récupère la liste des menus
