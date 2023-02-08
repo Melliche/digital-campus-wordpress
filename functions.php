@@ -34,7 +34,11 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
-add_image_size( 'logo-footer', 373, 146, array( 'center', 'center' ) );
 
-//trouver la bonne size pour image section 1 ecole
-//add_image_size( 'custom-size', 220, 180 ); // 220 pixels wide by 180 pixels tall, soft proportional crop mode
+add_image_size( 'logo-footer', 373, 146, array( 'center', 'center' ) );
+add_image_size('panoramic-size-frontpage', 1512, 365, array('center', 'center'));
+add_image_size('presentation-size-frontpage', 756, 755, array('center', 'center'));
+add_image_size('card-size-frontpage', 350, 210, array('center', 'center'));
+add_image_size('presentation-size-page', 628, 421, array('center', 'center'));
+
+add_image_size( 'logo-footer', 373, 146, array( 'center', 'center' ) );
