@@ -13,6 +13,13 @@ module.exports = {
     fontFamily: {
       display: ["Baloo 2", "cursive"],
     },
+      maxWidth: {
+        'max': '1512px',
+      },
+      listStyleType: {
+        square: 'square',
+      }
+    },
     colors: {
       'orange': '#F87C56',
       'blue': '#0092BD',
