@@ -11,5 +11,5 @@ Version: 1.0
 @tailwind utilities;
 
 .mycontainer {
-    @apply relative mx-auto pr-1 pl-1 w-full max-w-max xl:max-w-7xl;
+    @apply relative mx-auto pr-1 pl-1 w-full 2xl:max-w-max xl:max-w-7xl;
 }
