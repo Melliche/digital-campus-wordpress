@@ -515,7 +515,7 @@
             "key": "field_63dbd119737c5",
             "label": "text",
             "name": "section6_text",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -525,10 +525,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_63dbd1eb737c6",
@@ -976,5 +976,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675845192
+    "modified": 1675864694
 }
