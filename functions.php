@@ -34,11 +34,7 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
-<<<<<<< HEAD
-add_image_size( 'logo-footer', 373, 146, array( 'center', 'center' ) );
-=======
-add_image_size('panoramic-size-frontpage', 1512, 365, array('center', 'center'));
-add_image_size('presentation-size-frontpage', 756, 755, array('center', 'center'));
+add_image_size('logo-footer', 373, 146, array( 'center', 'center' ) );
+add_image_size('panoramic-size-frontpage', 1520, 365, array('center', 'center'));
 add_image_size('card-size-frontpage', 350, 210, array('center', 'center'));
 add_image_size('presentation-size-page', 628, 421, array('center', 'center'));
->>>>>>> d2783ea2aaa2a782a3c31b6df1c6f5457073f611

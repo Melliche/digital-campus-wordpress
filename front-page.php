@@ -51,7 +51,7 @@
     </div>
 
     <div class="flex justify-center bg-gray pb-20 pt-20">
-        <div class="w-4/5">
+        <div class="mycontainer">
             <div class="pl-3">
                 <h2 class="text-8xl	w-2/4 mb-7"><?php the_field('section3_title2'); ?></h2>
                 <p class="text-gray-grass font-medium"><?php the_field('section3_txt'); ?></p>
@@ -68,7 +68,7 @@
                             ?>
 
                                 <li class="flex p-5 mt-3 bg-white ">
-                                    <div class="flex w-3/5 justify-between">
+                                    <div class=" w-3/5  grid grid-cols-3">
                                         <p class="ml-7 font-bold text-lg"><?php echo $name; ?></p>
                                         <p class="text-gray-grass font-medium"><?php echo $date; ?></p>
                                         <p class="text-gray-grass font-medium"><?php echo $hour; ?></p>
@@ -89,21 +89,39 @@
         </div>
     </div>
     <div class="h-60 bg-black flex justify-center items-center">
-        <div class="w-4/5 ">
+        <div class="container w-4/5 ">
 
-            <h2 class="w-30% text-white font-normal text-4xl"><?php the_field('section4_text_center'); ?></h2>
+            <h2 class=" w-30% text-white font-normal text-4xl"><?php the_field('section4_text_center'); ?></h2>
 
         </div>
 
     </div>
     <div>
-        <div>
-            <h2></h2>
-            <p></p>
-            <!-- repeter -->
+        
+    <div class="grid grid-cols-2 w-full">
+        <div class="bg-orange px-11rem py-7 text-white">
+            <h2 class="text-9xl	font-medium mb-7"><?php the_field('section5_title'); ?></h2>
+            <p class="text-lg mb-7 w-70%"><?php the_field('section5_text'); ?></p>
+            <nav class="pointer-events-auto hidden md:block">
+                <ul class="grid grid-cols-2">
+                    <?php
+                    // On récupère la liste des menus
+                    $menuLocations = get_nav_menu_locations();
+                    // On récupère l'ID de notre menu principal
+                    $menuID = $menuLocations['liste_campus'];
+                    // On récupère les liens de ce menu
+                    $menu = wp_get_nav_menu_items($menuID);
+                    // On boucle dans les liens et on les affiche
+                    foreach ($menu as $navItem) {
+                        echo '<li class="py-2"><a class="text-2xl font-medium text-gray-400" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
+                    }
+                    ?>
+                </ul>
+            </nav>
         </div>
+        
         <div>
-            <div>
+            <div class="h-full w-full">
                 <?php
                 $image = get_field('section5_image');
                 $size = 'presentation-size-frontpage';
