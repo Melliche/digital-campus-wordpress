@@ -13,7 +13,7 @@
         ?>
     </div>
     <nav class="mb-12">
-        <ul class="hidden sm:flex">
+        <ul class="flex flex-col lg:flex-row justify-center items-center">
             <?php
             // On récupère la liste des menus
             $menuLocations = get_nav_menu_locations();
@@ -35,10 +35,10 @@
     </nav>
 </section>
 <section class="h-auto flex flex-col items-center justify-center">
-    <div class="grid grid-cols-4 mt-24 row-auto gap-14 mb-12">
-        <div class="col-start-2">
+    <div class="grid grid-cols-3 lg:grid-cols-4 mt-24 row-auto gap-14 mb-12">
+        <div class="col-start-1 lg:col-start-2 ml-8 lg:ml-0">
             <h2 class="text-lg"><?= get_field('formulaire_titre_1', 'options'); ?></h2>
-            <nav class="pointer-events-auto md:block">
+            <nav class=" pointer-events-auto md:block">
                 <ul class="grid grid-cols-2">
                     <?php
                     // On récupère la liste des menus
@@ -49,7 +49,7 @@
                     $menu = wp_get_nav_menu_items($menuID);
                     // On boucle dans les liens et on les affiche
                     foreach ($menu as $navItem) {
-                        echo '<li class="py-2"><a class="text-[0.93rem] text-gray-400" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
+                        echo '<li class="py-2"><a class="text-[0.93rem] text-gray" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
                     }
                     ?>
                 </ul>
@@ -68,7 +68,7 @@
                     $menu = wp_get_nav_menu_items($menuID);
                     // On boucle dans les liens et on les affiche
                     foreach ($menu as $navItem) {
-                        echo '<li class="py-2"><a class="text-[0.93rem] text-gray-400" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
+                        echo '<li class="py-2"><a class="text-[0.93rem] text-gray" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
                     }
                     ?>
                 </ul>
@@ -95,7 +95,7 @@
             </div>
         </div>
     </div>
-    <p class="text-gray-400 text-[10px] my-8"><?= get_field('certif', 'options'); ?></p>
+    <p class="text-gray text-[10px] my-8"><?= get_field('certif', 'options'); ?></p>
 </section>
 
 </body>
