@@ -20,7 +20,8 @@ module.exports = {
       },
       listStyleType: {
         square: 'square',
-      }
+        hyphen: "-",
+      },
       colors: {
         'orange': '#F87C56',
         'blue': '#0092BD',

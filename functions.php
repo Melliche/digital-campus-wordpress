@@ -1,5 +1,35 @@
 <?php
 
+// Créer le CPT Formation
+function portfolio_register_post_types()
+{
+
+    // CPT Formation
+    $labels = array(
+        'name' => 'Formation',
+        'all_items' => 'Toutes les formations',  // affiché dans le sous menu
+        'singular_name' => 'Formation',
+        'add_new_item' => 'Ajouter une formation',
+        'edit_item' => 'Modifier la formation',
+        'menu_name' => 'Formations'
+    );
+
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-customizer',
+    );
+
+
+    register_post_type('formations', $args);
+}
+
+add_action('init', 'portfolio_register_post_types'); // Le hook init lance la fonction
 
 // Ajouter la prise en charge des images mises en avant
 add_theme_support('post-thumbnails');
@@ -34,7 +64,7 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
-add_image_size('logo-footer', 373, 146, array( 'center', 'center' ) );
+add_image_size('logo-footer', 373, 146, array('center', 'center'));
 add_image_size('panoramic-size-frontpage', 1520, 365, array('center', 'center'));
 add_image_size('card-size-frontpage', 350, 210, array('center', 'center'));
 add_image_size('presentation-size-page', 628, 421, array('center', 'center'));
