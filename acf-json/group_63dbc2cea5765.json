@@ -732,7 +732,7 @@
             "key": "field_63dbd374737d1",
             "label": "title",
             "name": "section_8_title",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -742,10 +742,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_63dbd391737d2",
@@ -786,30 +786,6 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_63e3b9c7212e8",
-                    "label": "image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_63dbd3df737d4",
                     "label": "text",
                     "name": "text",
@@ -832,7 +808,7 @@
                     "key": "field_63dbd48b737d5",
                     "label": "button",
                     "name": "button",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -843,9 +819,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -973,7 +949,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "74"
+                "value": "10"
             }
         ]
     ],
@@ -1000,5 +976,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675868630
+    "modified": 1675949353
 }

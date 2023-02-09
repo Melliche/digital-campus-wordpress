@@ -99,7 +99,7 @@
     <div>
 
         <div class="grid grid-cols-2 w-full">
-            <div class="bg-orange px-12rem py-7 text-white">
+            <div class="bg-orange px-48 py-7 text-white">
                 <h2 class="text-9xl	font-medium mb-7"><?php the_field('section5_title'); ?></h2>
                 <p class="text-lg mb-7 w-70%"><?php the_field('section5_text'); ?></p>
                 <nav class="pointer-events-auto hidden md:block">
@@ -167,40 +167,78 @@
             </div>
         </div>
 
-        <div>
-            <h2 class=""><?php the_field('section_8_title'); ?></h2>
-            <div>
-                <?php if (have_rows('section_8_repeteur')) :
+        <div class="">
+            <h2 class="w-full text-center text-7xl	my-14"><?php the_field('section7_title'); ?></h2>
+            <div class="">
+                <?php if (have_rows('section7_repeteur')) :
                 ?>
-                    <ul class="">
-                        <?php while (have_rows('section_8_repeteur')) : the_row();
-                            $title = get_sub_field('title');
+                    <div class="grid grid-cols-3 mx-40 my-20 gap-x-14">
+                        <?php while (have_rows('section7_repeteur')) : the_row();
+                            $desc = get_sub_field('desc');
+                            $image = get_sub_field('image');
+                            $name = get_sub_field('name');
                             $text = get_sub_field('text');
-                            $button = get_sub_field('button');
                         ?>
 
-                            <li class="">
-
-                                <p class=""><?php echo $title; ?></p>
-                                <div>
-                                    <p class=""><?php echo $text; ?></p>
-                                    <p class=""><?php echo $button; ?></p>
+                            <div class="bg-gray p-7 ">
+                                <p class="text-center my-7"><?php echo $text ?></p>
+                                <div class="grid grid-cols-2">
                                     <?php
-                                    $image = get_field('image');
                                     $size = 'profile-image';
                                     if ($image) {
-                                        echo wp_get_attachment_image($image, $size);
+                                        echo wp_get_attachment_image($image, $size, ' ', array('class' => 'rounded-full'));
                                     }
                                     ?>
+
+                                    <div class="">
+                                        <h3 class="font-semibold"><?php echo $name ?></h3>
+                                        <p><?php echo $desc ?></p>
+                                    </div>
                                 </div>
-
-                            </li>
-
+                            </div>
 
                         <?php endwhile; ?>
-                    </ul>
+                    </div>
                 <?php endif; ?>
             </div>
+        </div>
+
+
+
+        <div>
+            <div class="mycontainer">
+                <h2 class=" text-7xl w-5/12	"><?php the_field('section_8_title'); ?></h2>
+            </div>
+            <?php if (have_rows('section_8_repeteur')) :
+                $i = 0; ?>
+                <ul class="grid grid-cols-4 h-auto">
+                    <?php while (have_rows('section_8_repeteur')) : the_row();
+                        $title = get_sub_field('title');
+                        $text = get_sub_field('text');
+                        $button = get_sub_field('button');
+
+                    ?>
+                        <?php if ($i == 0) {
+                            $color = 'bg-orange';
+                            $bgBtn = 'bg-white';
+                        } elseif ($i == 1) {
+                            $color = 'bg-gray-grass';
+                            $bgBtn = '';
+                        } elseif ($i == 2) {
+                            $color = 'bg-blue';
+                        } elseif ($i == 3) {
+                            $color = 'bg-black';
+                        } ?>
+                        <li class="<?php echo $color ?> text-white p-12">
+                            <p class="w-32 text-7xl font-light text-white font-semibold underline underline-offset-[10px] decoration-4"><?= $title; ?></p>
+                            <p class="w-3/4 my-7 text-2xl text-white"><?php echo $text; ?></p>
+                            <a class="<?php echo $bgBtn ?> text-black p-3" href=""><?php echo $button; ?></a>
+                        </li>
+                    <?php
+                        $i++;
+                    endwhile; ?>
+                </ul>
+            <?php endif; ?>
         </div>
 </section>
 
