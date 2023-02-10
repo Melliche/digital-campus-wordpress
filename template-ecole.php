@@ -27,7 +27,7 @@
         <p><?= get_field('texte_section3'); ?></p>
     </section>
 
-    <section class="mycontainer h-auto bg-gray-300">
+    <section class="mycontainer h-auto">
         <h2 class="text-4xl font-semibold my-8"><?= get_field('titre_section4'); ?></h2>
 
         <?php if (have_rows('repeteur_liste_section4')) :
@@ -51,7 +51,7 @@
 
         <?php if (have_rows('repeteur_case_section4')) :
             $i = 0; ?>
-            <ul class="grid grid-cols-4 h-auto">
+            <ul class="grid grid-cols-1 lg:grid-cols-4 h-auto">
                 <?php while (have_rows('repeteur_case_section4')) : the_row();
                     $titre = get_sub_field('titre');
 
@@ -69,7 +69,7 @@
                         $color = 'bg-black';
                         $number = '04';
                     } elseif ($i == 4) {
-                        $color = 'bg-gray';
+                        $color = 'bg-grey';
                         $number = '05';
                     } ?>
                     <li class="<?php echo $color ?> text-white grid grid-rows-2 gap-2 pl-8 pr-32 py-8">
@@ -83,12 +83,12 @@
         <?php endif; ?>
     </section>
 
-    <section class="mycontainer h-auto bg-gray-300">
+    <section class="mycontainer h-auto">
         <h2 class="text-4xl font-semibold my-8"><?= get_field('titre_section5'); ?></h2>
         <p><?= get_field('texte_section5'); ?></p>
     </section>
 
-    <section class="mycontainer h-auto bg-gray-300">
+    <section class="mycontainer h-auto">
         <h2 class="text-4xl font-semibold my-8"><?= get_field('titre_section6'); ?></h2>
         <p><?= get_field('texte_section6'); ?></p>
         <?php if (have_rows('liste_section6')) :
@@ -107,7 +107,7 @@
         <?php endif; ?>
     </section>
 
-    <section class="mycontainer h-auto bg-gray-300 mb-20">
+    <section class="mycontainer h-auto mb-20">
         <h2 class="text-4xl font-semibold my-8"><?= get_field('titre_section7'); ?></h2>
         <p><?= get_field('texte_section7'); ?></p>
         <?php if (have_rows('liste_section7')) :

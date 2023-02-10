@@ -32,6 +32,7 @@
             </ul>
         <?php endif; ?>
     </section>
+    <div class=" mt-5 h-[1px] bg-gray-200 w-screen"></div>
 
     <section class="mycontainer h-auto my-10">
         <p><?= get_field('texte_section3'); ?></p>
