@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head(); ?>
 </head>
 
 
 <body <?php body_class(); ?>>
-    <header class="flex flex-row justify-start items-center h-24 bg-[#EBEBEB]">
-        <div class="flex items-center justify-center h-8 px-8">
-            <?php
-            $image = get_field('logo', 'options');
-            $size = 'footer-size';
-            if ($image) {
-                echo wp_get_attachment_image($image, $size);
-            }
-            ?>
-        </div>
+<?php
+if (is_page('contact')) {
+} else {
+    ?>
+
+    <header class="flex flex-row justify-start items-center h-24">
+        <a href="/">
+            <div class="flex items-center justify-center h-8 px-8">
+                <?php
+                $image = get_field('logo', 'options');
+                $size = 'footer-size';
+                if ($image) {
+                    echo wp_get_attachment_image($image, $size);
+                }
+                ?>
+            </div>
+        </a>
         <div class="flex text-xl font-semibold text-gray-500 px-2 sm:hidden">Menu</div>
         <nav>
             <ul class="hidden flex-row sm:flex">
@@ -41,5 +48,9 @@
             </ul>
         </nav>
     </header>
+    <?php
+}
+?>
 
-    <?php wp_body_open(); ?>
+
+<?php wp_body_open(); ?>

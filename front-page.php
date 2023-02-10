@@ -113,7 +113,7 @@
                         $menu = wp_get_nav_menu_items($menuID);
                         // On boucle dans les liens et on les affiche
                         foreach ($menu as $navItem) {
-                            echo '<li class="py-2"><a class="text-2xl font-medium text-gray-400" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
+                            echo '<li class="py-2"><a class="text-2xl font-medium" href="' . $navItem->url . '" title="' . $navItem->title . '">' . $navItem->title . '</a></li>';
                         }
                         ?>
                     </ul>
