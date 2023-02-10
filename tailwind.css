@@ -13,3 +13,7 @@ Version: 1.0
 .mycontainer {
     @apply relative mx-auto px-8 lg:px-24  w-full 2xl:max-w-max xl:max-w-7xl;
 }
+
+.frm_submit {
+    @apply flex justify-center items-center;
+}
