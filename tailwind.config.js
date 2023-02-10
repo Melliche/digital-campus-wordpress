@@ -3,6 +3,9 @@ module.exports = {
   content: ["./**/*.php"],
   theme: {
     extend: {
+      boxShadow: {
+        'bxsh': '0px 0px 36.5px 36.5px rgba(0, 0, 0, 0.08)',
+      },
       maxWidth: {
         'max': '1520px',
       },

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <section>
-    <div class="flex w-full justify-center">
+    <div class="">
         <div>
             <?php
             $image = get_field('section1_image_t');
             $size = 'panoramic-size-frontpage';
             if ($image) {
-                echo wp_get_attachment_image($image, $size);
+                echo wp_get_attachment_image($image, $size, ' ', array('class' => 'w-full'));
             }
             ?>
         </div>
@@ -56,11 +56,11 @@
                 <h2 class="text-8xl	w-2/4 mb-7"><?php the_field('section3_title2'); ?></h2>
                 <p class="text-gray-grass font-medium"><?php the_field('section3_txt'); ?></p>
             </div>
-            <div class="flex w-full justify-between	">
+            <div class="flex w-full justify-between	flex-col md:flex-row">
                 <div>
                     <?php if (have_rows('section3_repeteur')) :
                     ?>
-                        <ul class="w-60rem">
+                        <ul class="xl:w-60rem">
                             <?php while (have_rows('section3_repeteur')) : the_row();
                                 $name = get_sub_field('name');
                                 $date = get_sub_field('date');
@@ -126,7 +126,7 @@
                     $image = get_field('section5_image');
                     $size = 'presentation-size-frontpage';
                     if ($image) {
-                        echo wp_get_attachment_image($image, $size);
+                        echo wp_get_attachment_image($image, $size, ' ', array('class' => 'w-full'));
                     }
                     ?>
                 </div>
@@ -151,7 +151,7 @@
                                 $image = get_sub_field('image');
                                 $size = 'card-size-frontpage';
                                 if ($image) {
-                                    echo wp_get_attachment_image($image, $size);
+                                    echo wp_get_attachment_image($image, $size, ' ', array('class' => 'w-full'));
                                 }
 
 
@@ -167,7 +167,7 @@
             </div>
         </div>
 
-        <div class="">
+        <div class=" ">
             <h2 class="w-full text-center text-7xl	my-14"><?php the_field('section7_title'); ?></h2>
             <div class="">
                 <?php if (have_rows('section7_repeteur')) :
@@ -180,7 +180,7 @@
                             $text = get_sub_field('text');
                         ?>
 
-                            <div class="bg-gray p-7 ">
+                            <div class="bg-gray p-7 grid-row-2 grid items-center ">
                                 <p class="text-center my-7"><?php echo $text ?></p>
                                 <div class="grid grid-cols-2">
                                     <?php
@@ -230,7 +230,7 @@
                             $color = 'bg-black';
                         } ?>
                         <li class="<?php echo $color ?> text-white p-12">
-                            <p class="w-32 text-7xl font-light text-white font-semibold underline underline-offset-[10px] decoration-4"><?= $title; ?></p>
+                            <p class="w-32 text-7xl text-white font-semibold underline underline-offset-[10px] decoration-4"><?= $title; ?></p>
                             <p class="w-3/4 my-7 text-2xl text-white"><?php echo $text; ?></p>
                             <a class="<?php echo $bgBtn ?> text-black p-3" href=""><?php echo $button; ?></a>
                         </li>
@@ -239,6 +239,46 @@
                     endwhile; ?>
                 </ul>
             <?php endif; ?>
+        </div>
+
+        <div class="mycontainer my-28">
+            <h2 class="text-5xl text-center"><?php the_field('section9_title'); ?></h2>
+            <div class="flex flex-col gap-16 my-20">
+
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'orderby' => 'publish_date',
+                    'order' => 'ASC',
+                );
+                // the query
+                $the_query = new WP_Query($args); ?>
+                <div class="grid grid-cols-3 gap-x-14 ">
+                    <?php if ($the_query->have_posts()) : ?>
+
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                            <article class="shadow-bxsh grid grid-row-2	">
+
+                                <div class=""><?php echo the_post_thumbnail('article-image', array('class' => 'w-full')) ?></div>
+                                <div class="m-7">
+                                    <p class=" my-7 text-xl"><?php echo get_the_excerpt() ?></p>
+                                    <a class="text-orange flex justify-end w-full " href="<?php the_permalink() ?>">Read more</a>
+                                </div>
+                            </article>
+
+
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+
+                    <?php else : ?>
+                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                    <?php endif; ?>
+
+                </div>
+
+
+            </div>
         </div>
 </section>
 
