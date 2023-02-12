@@ -18,9 +18,9 @@ if (is_page('contact')) {
 } else {
     ?>
 
-    <header class="flex flex-row justify-start items-center h-24">
+    <header class="flex flex-col sm:flex-row justify-start items-center h-auto">
         <a href="/">
-            <div class="flex items-center justify-center h-8 px-8">
+            <div class="flex items-center justify-center h-8 px-8 my-8">
                 <?php
                 $image = get_field('logo', 'options');
                 $size = 'footer-size';
@@ -30,9 +30,8 @@ if (is_page('contact')) {
                 ?>
             </div>
         </a>
-        <div class="flex text-xl font-semibold text-gray-500 px-2 sm:hidden">Menu</div>
-        <nav>
-            <ul class="hidden flex-row sm:flex">
+        <nav class="mb-8 sm:mb-0">
+            <ul class="flex-col sm:flex-row sm:flex">
                 <?php
                 // On récupère la liste des menus
                 $menuLocations = get_nav_menu_locations();

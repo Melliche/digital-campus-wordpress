@@ -39,7 +39,7 @@ if (is_page('contact')) {
             <div class="col-start-1 lg:col-start-2 ml-8 lg:ml-0">
                 <h2 class="text-lg"><?= get_field('formulaire_titre_1', 'options'); ?></h2>
                 <nav class=" pointer-events-auto md:block">
-                    <ul class="grid grid-cols-2">
+                    <ul class="grid grid-cols-1 sm:grid-cols-2">
                         <?php
                         // On récupère la liste des menus
                         $menuLocations = get_nav_menu_locations();

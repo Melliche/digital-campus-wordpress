@@ -4,7 +4,7 @@
 
     <section class="grid grid-cols-10 items-center bg-[#EBEBEB] w-full">
         <div class="col-span-6">
-            <h1 class="text-6xl text-center"><?= get_field('titre'); ?></h1>
+            <h1 class="text-2xl sm:text-6xl text-center"><?= get_field('titre'); ?></h1>
         </div>
         <div class="col-span-4">
             <?php
@@ -32,7 +32,7 @@
 
         <?php if (have_rows('repeteur_liste_section4')) :
             $i = 0; ?>
-            <ul class="grid grid-cols-2 h-auto list-[square]">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 h-auto list-[square]">
                 <?php while (have_rows('repeteur_liste_section4')) : the_row();
                     $titre = get_sub_field('titre_element');
                     $text = get_sub_field('texte_element');

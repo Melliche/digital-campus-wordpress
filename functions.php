@@ -66,6 +66,7 @@ if (function_exists('acf_add_options_page')) {
 
 add_image_size('logo-footer', 373, 146, array('center', 'center'));
 add_image_size('panoramic-size-frontpage', 1520, 365, array('center', 'center'));
+add_image_size('presentation-size-frontpage', 500, 1000, array('center', 'center'));
 add_image_size('card-size-frontpage', 350, 210, array('center', 'center'));
 add_image_size('presentation-size-page', 628, 421, array('center', 'center'));
 add_image_size('profile-image', 180, 180, array('center', 'center'));
