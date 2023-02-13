@@ -6,7 +6,7 @@
                 $image = get_field('section1_image_t');
                 $size = 'panoramic-size-frontpage';
                 if ($image) {
-                    echo wp_get_attachment_image($image, $size, ' ', array('class' => 'w-full'));
+                    echo wp_get_attachment_image($image, $size, ' ', array('class' => 'w-full max-h-[20rem] object-cover'));
                 }
                 ?>
             </div>
@@ -127,7 +127,7 @@
                 $image = get_field('section5_image');
                 $size = 'presentation-size-frontpage';
                 if ($image) {
-                    echo wp_get_attachment_image($image, $size, ' ', array('class' => ''));
+                    echo wp_get_attachment_image($image, $size, ' ', array('class' => 'object-cover w-full max-h-[46rem]'));
                 }
                 ?>
             </div>
